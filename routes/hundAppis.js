@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var mongoose = require('mongoose');
-var HundAppisModel = require('../models/hundappisModel.js');
+var HundAppisModel = require('../models/HundAppisModel.js');
 //req och res här är request- respektive response-objekten
 
 /* GET users listing. READ */
