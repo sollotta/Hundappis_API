@@ -11,7 +11,7 @@ router.get('/:id', function(req, res, next) {
   HundAppisModel.findById(req.params.id, function (err, hundAppis) {
     if (err) return next(err);
     else {
-    //Om det inte uppstår fel så skicka hundAppis i jsonformat
+    //Om det inte uppstår fel så skicka hundAppis i Jsonformat
     res.json(hundAppis);
     
     }
