@@ -6,6 +6,19 @@ var HundAppisModel = require('../models/HundAppisModel.js');
 //req och res här är request- respektive response-objekten
 
 /* GET users listing. READ */
+router.get('/', function(req, res, next) {
+  //find är Mongoose funktion. err innehåller eventuellt fel, annars kommer resultatet att finnas i hundAppis
+  HundAppisModel.find( function (err, hundAppis) {
+    if (err) return next(err);
+    else {
+    //Om det inte uppstår fel så skicka hundAppis i Jsonformat
+        res.json(hundAppis);
+    
+    }
+    });
+    });
+
+/* GET with ID users listing. READ */
 router.get('/:id', function(req, res, next) {
   //find är Mongoose funktion. err innehåller eventuellt fel, annars kommer resultatet att finnas i hundAppis
   HundAppisModel.findById(req.params.id, function (err, hundAppis) {
