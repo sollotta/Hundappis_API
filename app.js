@@ -20,7 +20,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-mongoose.connect('mongodb+srv://sollotta:firstappwebmaster@cluster0.y2zqu.mongodb.net/hundappar?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://sollotta:<password>@cluster0.y2zqu.mongodb.net/hundappar?retryWrites=true&w=majority');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function (callback) {

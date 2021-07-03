@@ -13,8 +13,7 @@ router.get('/', function(req, res, next) {
     else {
     //Om det inte uppstår fel så skicka hundAppis i Jsonformat
         res.json(hundAppis);
-    
-    }
+        }
     });
     });
 
